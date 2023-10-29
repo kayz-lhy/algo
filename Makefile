@@ -142,6 +142,19 @@ test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
+#=============================================================================
+# Target rules for targets named scanf_test
+
+# Build rule for target.
+scanf_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scanf_test
+.PHONY : scanf_test
+
+# fast build rule for target.
+scanf_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scanf_test.dir/build.make CMakeFiles/scanf_test.dir/build
+.PHONY : scanf_test/fast
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -165,6 +178,30 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/scanf_test.o: src/scanf_test.cpp.o
+.PHONY : src/scanf_test.o
+
+# target to build an object file
+src/scanf_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scanf_test.dir/build.make CMakeFiles/scanf_test.dir/src/scanf_test.cpp.o
+.PHONY : src/scanf_test.cpp.o
+
+src/scanf_test.i: src/scanf_test.cpp.i
+.PHONY : src/scanf_test.i
+
+# target to preprocess a source file
+src/scanf_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scanf_test.dir/build.make CMakeFiles/scanf_test.dir/src/scanf_test.cpp.i
+.PHONY : src/scanf_test.cpp.i
+
+src/scanf_test.s: src/scanf_test.cpp.s
+.PHONY : src/scanf_test.s
+
+# target to generate assembly for a file
+src/scanf_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scanf_test.dir/build.make CMakeFiles/scanf_test.dir/src/scanf_test.cpp.s
+.PHONY : src/scanf_test.cpp.s
 
 src/test.o: src/test.cpp.o
 .PHONY : src/test.o
@@ -199,10 +236,14 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
+	@echo "... scanf_test"
 	@echo "... test"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/scanf_test.o"
+	@echo "... src/scanf_test.i"
+	@echo "... src/scanf_test.s"
 	@echo "... src/test.o"
 	@echo "... src/test.i"
 	@echo "... src/test.s"
