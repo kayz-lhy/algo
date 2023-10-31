@@ -1,5 +1,6 @@
 #include <cstdio>
 #include <iostream>
+#include <string>
 
 using namespace std;
 int main() {
@@ -9,4 +10,9 @@ int main() {
 
   fscanf(stdin, "%d%d%d", &a, &b, &c);
   cout << a << '\n' << b << '\n' << c << endl;
+
+  char *chstr;
+  string str;
+  cin.getline(chstr, 5);
+  getline(cin, str);
 }
